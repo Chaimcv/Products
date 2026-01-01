@@ -7,7 +7,7 @@ const product=fetch('https://dummyjson.com/products')
 
 const display=product.products.map(item=>{
     return`
-    <div class="card" ${key=item.id}>
+    <div class="card md:bg-red-600 bg-green-800" ${key=item.id}>
     <img id="img" src=${item?.images} alt=${item?.title}>
     <h3 class="card-title">${item?.title}</h3>
     </div>
@@ -15,8 +15,7 @@ const display=product.products.map(item=>{
  document.getElementById("display").innerHTML=display;
   }) 
   
-
-
+ 
 
 
   
