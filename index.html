@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"></style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="head">
-        <h1>SHOP.CO</h1>&nbsp;
-        <select name="shop">
+    <header >
+         <ul class="head">
+            <li><img src="./assets/SHOP.CO.png"></li>&nbsp;
+            <li><select name="shop">
             <option disabled selected>Shop</option>
             <option>Cosmetics</option>
             <option>Fruits</option>
             <option>Clothes</option>
-        </select>&nbsp;
-        <button>New Arrivals</button>&nbsp;
-         <button>Brands</button>&nbsp;
-         <input type="text" placeholder="Search">
+        </select></li>&nbsp;
+            <li><button>New Arrivals</button></li>&nbsp;
+            <li><button>Brands</button></li>&nbsp;
+            <li><input type="text" placeholder="Search"></li>
+            <li><img src="./assets/Frame 5.png"></li>
+         </ul>
 
     </header>
     
-    <div id="view" class="h-50% w-100% ml-50%">
+    <div id="view" class="h-100 w-[100%] ">
         <h1 id="caption">FIND PRODUCTS<br> THAT MATCHES<br> YOUR NEED</h1>
     </div>
     <div id="display">
