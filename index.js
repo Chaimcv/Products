@@ -7,9 +7,9 @@ const product=fetch('https://dummyjson.com/products')
 
 const display=product.products.map(item=>{
     return`
-    <div class="card md:bg-red-600 bg-green-800" ${key=item.id}>
-    <img id="img" src=${item?.images} alt=${item?.title}>
-    <h3 class="card-title">${item?.title}</h3>
+    <div class="card h-70 bg-slate-200 outline-10 outline-white text-xs md:text-2xl" ${key=item.id}>
+    <img class="img w-60 h-50 " src=${item?.images} alt=${item?.title}>
+    <h3 class="card-title text-center si">${item?.title}</h3>
     </div>
     `;}).join("");
  document.getElementById("display").innerHTML=display;
