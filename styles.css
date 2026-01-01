@@ -1,7 +1,18 @@
 body{
     background-color: blue;
-}
-.view{
-    background-image: assets\Frame 129.png;
+} 
+#view{
+    background-image:url("./assets/Frame\ 126.png");
     background-color: aliceblue;
+    background-position: right;
+}
+#caption{
+    margin-left: 10%;
+    text-wrap-style:balance;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    padding: 2%;
 }
