@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header >
+    <!-- small screen -->
+    <header class="lg:hidden mt-3">
+        <ul class="flex grid grid-cols-4 gap-0">
+           <li><img src="./assets/SHOP.CO.png" class="h-[70%] w-[70%]"></li>&nbsp;
+            <li><input type="text" id="search_icon"></li>
+            <li><img src="./assets/cart.png"></li>
+             <li><img src="./assets/Frame (3).png"></li>
+        </ul>
+    </header>
+     <!-- large screen -->
+    <header class="hidden lg:block" > 
          <ul class="head">
             <li><img src="./assets/SHOP.CO.png"></li>&nbsp;
             <li><select name="shop">
@@ -20,13 +30,14 @@
         </select></li>&nbsp;
             <li><button>New Arrivals</button></li>&nbsp;
             <li><button>Brands</button></li>&nbsp;
-            <li><input type="text" placeholder="Search  "></li>&nbsp;&nbsp;
-            <li><img src="./assets/Frame 5.png"></li>
+            <li><input type="text" placeholder="Search"></li>&nbsp;&nbsp;
+           <li><img src="./assets/cart.png"></li>
+             <li><img src="./assets/Frame (3).png"></li>
          </ul>
 
     </header>
     
-    <div id="view" >
+    <div id="view" class="w-[100%] h-[100%]" >
         <h1 id="caption">FIND PRODUCTS<br> THAT MATCHES<br> YOUR NEED</h1>&nbsp;
         <p class="sub">Browse through our diverse range of meticulous range of products.</p><br>
         &nbsp;
@@ -35,18 +46,19 @@
     </div>
     <div id="display" class="flex grid grid-cols-3 bg-yellow-300 mx-3 md:grid-cols-5">
     </div><br>
+    
     <footer>
         <div id="footer" class="bg-white mb-8" >
-            <div id="offer" class="mx-10 bg-black rounded-full flex grid grid-cols-2 ">
-                <div id="text" class="text-white  ml-3 ">
+            <div id="offer" class="mx-5 bg-black rounded-full justify-around md:flex grid-cols-2 xs:flex grid-rows-2">
+                <div id="text" class="text-white  ml-3 mt-1 ">
                     <h2 class="p-3 mt-6">STAY UPTO DATE ABOUT OUR OFFERS</h2></div>
-                <div id="subscribe">
+                <div id="subscribe" class="mx-10" >
                     <input type="text" class="bg-white mt-3 " placeholder="Enter your email address"><br><br>
-                    <button class="text-black bg-white p-1 mb-3"> Subscribe to Newsletter </button>
+                    <button class="text-black bg-white p-1 mb-3">Subscribe to Newsletter</button>
                 </div>
             </div>
             <br>
-            <div id="multiple" class="flex grid-cols-5 mx-10 gap-20">
+            <div id="multiple" class="flex grid grid-cols-2 md:grid-cols-5 mx-10 gap-20">
                 <div id="shop_co">
                     <h1 class="font-bold">SHOP.CO</h1>
                     <p>We have products that suits you.From men to women</p><br>
@@ -82,7 +94,10 @@
                  </div>
             </div>
         </div>
-    
+    <div class="flex grid grid-cols-2 mx-3">
+        <img src="./assets/© 2000-2021, All rights reserved (1).png">
+        <img src="./assets/Frame 133.png">
+    </div>
     </footer>
    <script src="index.js"></script> 
 </body>
