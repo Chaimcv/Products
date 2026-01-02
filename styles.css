@@ -1,7 +1,7 @@
 
 #view{
-    background-image:url("./assets/Frame\ 126.png");
-    background-color: aliceblue;
+    /* background-image:url("./assets/Frame\ 126.png"); */
+    background-color:#F2F0F1;
     background-position: right;
     width: 100%;
 }
@@ -12,7 +12,7 @@
 #caption{
     margin-left: 4%;
     padding-top: 1%;
-    font-size: 38px;
+    /* font-size: 38px; */
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
 }
