@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="main" class="flex grid grid-cols-2">
+      <div id="image" class=" w-5 bg-black hidden lg:block">
+        <img src="./assets/Illustration.png" class="w-[50%] h-[50%]"/>
+      </div>
+      <div id="credentials">
+        <div>
+          <h1>Welcome to</h1>
+          <h1>Shop.co</h1>
+          <button><img src="./assets/search 1.png" />Login with Google</button><br>
+          <button><img src="./assets/Vector.png" />Login with facebook</button><br>
+          <img src="./assets/or.png" />
+          </div>
+          <div>
+          <input type="email" class="w-full p-2" placeholder="Email"><br>
+          <input type="password" placeholder="Password">
+          </div>
+          <div id="additional-section" class="flex justify-around">
+          <input type="checkbox"><label>Remember me</label>
+          <a href="forgotpassword.html">Forgot Password?</a>
+        </div>
+
+        <div><button onclick="">Login</button></div>
+     <h5>Don't have an account<a href="">Register</a></h5>
+      </div>
+    </div>
+    <script>
+      const login = fetch("https://dummyjson.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: "emilys",
+          password: "emilyspass",
+          expiresInMins: 30, // optional, defaults to 60
+        }),
+      })
+        .then((res) => res.json())
+        .then((login) => console.log(login));
+    </script>
+  </body>
+</html>
