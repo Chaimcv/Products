@@ -4,45 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"></style>
   </head>
   <body>
     <div id="main" class="flex grid grid-cols-2">
-      <div id="image" class=" w-5 bg-black hidden lg:block">
-        <img src="./assets/Illustration.png" class="w-[50%] h-[50%]"/>
+      <div id="image" class=" bg-black ">
+        <img src="./assets/Illustration.png" class="w-[100%] h-[100%] p-[10%]"/>
       </div>
-      <div id="credentials">
+      <div id="credentials" class="p-[10%]">
         <div>
           <h1>Welcome to</h1>
-          <h1>Shop.co</h1>
-          <button><img src="./assets/search 1.png" />Login with Google</button><br>
-          <button><img src="./assets/Vector.png" />Login with facebook</button><br>
+          <h1>Shop.co</h1><br>
+          <button class="w-full"><img src="./assets/search 1.png" />Login with Google</button><br>
+          <button class="w-full"><img src="./assets/Vector.png" />Login with facebook</button><br>
           <img src="./assets/or.png" />
-          </div>
-          <div>
-          <input type="email" class="w-full p-2" placeholder="Email"><br>
-          <input type="password" placeholder="Password">
-          </div>
-          <div id="additional-section" class="flex justify-around">
+        </div>
+        <div>
+          <input type="email" id="email" class="w-full p-2" placeholder="Email"><br>
+          <input type="password" id="pass" class="w-full p-2" placeholder="Password">
+        </div>
+        <div id="additional-section" class="flex justify-around">
           <input type="checkbox"><label>Remember me</label>
           <a href="forgotpassword.html">Forgot Password?</a>
         </div>
-
-        <div><button onclick="">Login</button></div>
+        <button class="text-center w-full font-white bg-[#FFFFFF]"onclick="login()">Login</button>
      <h5>Don't have an account<a href="">Register</a></h5>
       </div>
     </div>
     <script>
-      const login = fetch("https://dummyjson.com/auth/login", {
+        function login(){
+            const email=document.getElementById("email").value;
+            const pass=document.getElementById("pass").value;
+            console.log(email);
+        console.log(pass);
+         fetch("https://dummyjson.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: "emilys",
-          password: "emilyspass",
+          username: email,
+          password: pass,
           expiresInMins: 30, // optional, defaults to 60
         }),
       })
         .then((res) => res.json())
-        .then((login) => console.log(login));
+        .then((logg) =>{ 
+            console.log(logg)
+      if(logg.accessToken)
+      {
+       window.location.href="index.html";
+      }
+      else{
+        alert("invalid");
+      }
+        }
+        ) } ;
     </script>
   </body>
 </html>
