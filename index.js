@@ -21,7 +21,7 @@ const display=product.products.map(item=>{
 
       console.log(userimage);
       document.getElementById("profilepic").src=userimage;
-      document.getElementById("userimagelg").src="https://dummyjson.com/icon/emilys/128";
+      document.getElementById("userimagelg").src=userimage;
     
   function logout(){
     localStorage.removeItem("userdata");
