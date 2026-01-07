@@ -37,12 +37,12 @@
      <h5 class="mx-[30%]">Don't have an account?<a href="" class="text-blue-700">Register</a></h5>
       </div>
     </div>
+
     <script>
         function login(){
             const email=document.getElementById("email").value;
             const pass=document.getElementById("pass").value;
-            console.log(email);
-        console.log(pass);
+           
          fetch("https://dummyjson.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -55,15 +55,39 @@
         .then((res) => res.json())
         .then((logg) =>{ 
             console.log(logg)
-      if(logg.accessToken)
+      if(logg)
       {
+      
+        if(logg?.accessToken)
+      {
+        localStorage.setItem("token",logg.accessToken);
        window.location.href="index.html";
+      }
+      else{
+        window.location.href="login.html";
+      }
+      
+       if(logg?.firstName && logg?.image)
+       {
+        const userdata={
+          "username":logg?.firstName,
+          "userimage":logg?.image
+        }
+        localStorage.setItem("userdata",JSON.stringify(userdata));
+
+       }
       }
       else{
         alert("invalid");
       }
+      var user=JSON.parse(localStorage.getItem("userdata"));
+      const username=user.name;
+      const userimage=user.image;
+      document.getElementById("userimage").src=userimage;
         }
         ) } ;
+
+        
     </script>
   </body>
 </html>
