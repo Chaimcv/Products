@@ -14,7 +14,19 @@ const display=product.products.map(item=>{
     `;}).join("");
  document.getElementById("display").innerHTML=display;
   }) 
-  
+    var user=JSON.parse(localStorage.getItem("userdata"));
+      console.log(user);
+      const username=user?.username;
+      const userimage=user?.userimage;
+
+      console.log(userimage);
+      document.getElementById("profilepic").src=userimage;
+      document.getElementById("userimagelg").src="https://dummyjson.com/icon/emilys/128";
+    
+  function logout(){
+    localStorage.removeItem("userdata");
+    window.location.href="login.html";
+  }
  
 
 

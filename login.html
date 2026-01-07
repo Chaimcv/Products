@@ -39,6 +39,8 @@
     </div>
 
     <script>
+    
+        
         function login(){
             const email=document.getElementById("email").value;
             const pass=document.getElementById("pass").value;
@@ -80,14 +82,10 @@
       else{
         alert("invalid");
       }
-      var user=JSON.parse(localStorage.getItem("userdata"));
-      const username=user.name;
-      const userimage=user.image;
-      document.getElementById("userimage").src=userimage;
+      
         }
         ) } ;
 
-        
     </script>
   </body>
 </html>
