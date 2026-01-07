@@ -14,6 +14,7 @@ const display=product.products.map(item=>{
     `;}).join("");
  document.getElementById("display").innerHTML=display;
   }) 
+
     var user=JSON.parse(localStorage.getItem("userdata"));
       console.log(user);
       const username=user?.username;
@@ -22,6 +23,12 @@ const display=product.products.map(item=>{
       console.log(userimage);
       document.getElementById("profilepic").src=userimage;
       document.getElementById("userimagelg").src=userimage;
+
+      const token=localStorage.getItem('token')
+      if(!token)
+      {
+        window.location.href="login.html";
+      }
     
   function logout(){
     localStorage.removeItem("userdata");
