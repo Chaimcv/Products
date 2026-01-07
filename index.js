@@ -25,11 +25,12 @@ const display=product.products.map(item=>{
       document.getElementById("profilepic").src=userimage;
       document.getElementById("userimagelg").src=userimage;
 
-      const token=localStorage.getItem('token')
-      if(!token)
-      {
-        window.location.href="login.html";
-      }
+      // const token=localStorage.getItem('token')
+      // if(!token)
+      // {
+      //   window.location.href="login.html";
+      // }
+      
     //logout button
   function logout(){
     localStorage.removeItem("userdata");
