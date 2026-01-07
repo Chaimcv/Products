@@ -15,6 +15,7 @@ const display=product.products.map(item=>{
  document.getElementById("display").innerHTML=display;
   }) 
 
+     //loginpage
     var user=JSON.parse(localStorage.getItem("userdata"));
       console.log(user);
       const username=user?.username;
@@ -29,7 +30,7 @@ const display=product.products.map(item=>{
       {
         window.location.href="login.html";
       }
-    
+    //logout button
   function logout(){
     localStorage.removeItem("userdata");
     window.location.href="login.html";
